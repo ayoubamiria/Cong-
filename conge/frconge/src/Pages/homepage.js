@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Footer from "./components/footer/footer.js"
 import { useNavigate } from "react-router-dom";
 const Home = () => {
     const navigate = useNavigate();
@@ -8,8 +9,8 @@ const Home = () => {
         setConnectedUser(JSON.parse(localStorage.getItem("user_data")));//modifaction de la forme au objet et l'affectee
     //guard : ce bloc peut etre mis dans le hook apres appel de la fonction 
 
-        if (localStorage.getItem("user_date") == null)//si nest pas connecte  pas de donnee (null) et il veut acceder lil page home 
-        { navigate("/signin"); } // auto redirection lil page login 
+       /* if (localStorage.getItem("user_date") == null)//si nest pas connecte  pas de donnee (null) et il veut acceder lil page home 
+        { navigate("/signin"); } // auto redirection lil page login */
     
     };
     useEffect(() => {//appel au hook useEffect when we are redirecting to this page il faut auto appller getconnect 
@@ -21,9 +22,29 @@ const Home = () => {
     }, []);
 
     return (
-        <>
-            <h1> Hello  </h1>
-        </>
+        <div className="home-page">
+            <header className="header">
+                <div className="header-left">
+                    <span className="nav-item">ACCEUIL</span>
+                    <span className="nav-item">NOTIFICATION</span>
+                </div>
+                <div className="header-right">
+                    <span className="nav-item">PROFIL</span>
+                    <button className="logout-button">SE DECONNECTER</button>
+                </div>
+            </header>
+            <div className="content">
+                <div className="image-section">
+                    <img src="./frconge/src/images/home.jpg" alt="Buildings" />
+                </div>
+                <div className="menu-section">
+                    <button className="menu-item">Creer Congé</button>
+                    <button className="menu-item">Mes Congés</button>
+                    <button className="menu-item">Ma Calendrier</button>
+                </div>
+            </div>
+            <Footer/>
+        </div>
     );
 };
 export default Home;

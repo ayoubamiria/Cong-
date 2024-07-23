@@ -59,7 +59,7 @@ const Login = () => {
             console.log('Login successful:', response.data);
             localStorage.setItem('user_data', JSON.stringify(response.data.user)); // sauvgarder les donnees du user pour l'utiliser lorsque il connect 
             localStorage.setItem('token', response.data.token);//token de type string
-            navigate('/'); // Example: Redirecting after login lil page home 
+            navigate('/home'); // Example: Redirecting after login lil page home apres connection 
         } catch (error) {
             console.error(error);
             toast.error(error.response?.data?.message || 'Login failed');            }

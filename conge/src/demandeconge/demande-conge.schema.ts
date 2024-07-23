@@ -23,14 +23,13 @@ export class DemandeConge {
     })
     type: string;
 
-    @Prop({ type: String, required: true, enum: ['en attente', 'apprové', 'rejecté'], default: 'en attente' })
+    @Prop({ type: String, required: true, enum: ['en attente', 'approuvé', 'rejeté'], default: 'en attente' })
     status: string;
 
     @Prop({ type: String })
     reason: string;
 
-    @Prop({ type: Types.ObjectId, ref: 'User' })
-    approvedBy: Types.ObjectId;
+    
 }
 
 export const DemandeCongeSchema = SchemaFactory.createForClass(DemandeConge);

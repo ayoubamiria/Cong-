@@ -9,6 +9,7 @@ export class SoldeController {
     async create(@Body() createSoldeDto: any) {
         return this.soldeService.create(createSoldeDto);
     }
+    
 
     @Get()
     async findAll() {

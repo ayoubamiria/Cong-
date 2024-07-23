@@ -29,4 +29,5 @@ export class SoldeService {
     async remove(id: string): Promise<any> {
         return this.soldeModel.findByIdAndDelete(id).exec();
     }
+  
 }

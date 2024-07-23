@@ -5,9 +5,9 @@ import { DemandeCongeService } from './demande-conge.service';
 export class DemandeCongeController {
     constructor(private readonly demandeCongeService: DemandeCongeService) { }
 
-    @Post()
+    @Post('creeconge')
     async create(@Body() createDemandeCongeDto: any) {
-        return this.demandeCongeService.create(createDemandeCongeDto);
+        return this.demandeCongeService.creeConge(createDemandeCongeDto);
     }
 
     @Get()
@@ -15,9 +15,16 @@ export class DemandeCongeController {
         return this.demandeCongeService.findAll();
     }
 
-    @Get(':id')
+    @Get('historique/:id')
     async findOne(@Param('id') id: string) {
+        console.log("trouvé")
         return this.demandeCongeService.findOne(id);
+    }
+    ///////calandrier
+    @Get('calandrier/:id')
+    async findOneCal(@Param('id') id: string) {
+        console.log("trouvé")
+        return this.demandeCongeService.findOneApp(id);
     }
 
     @Put(':id')
