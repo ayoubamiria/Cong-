@@ -1,0 +1,573 @@
+.page-d-acceuil {
+    background-color: #ffffff;
+    height: 3106px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+}
+
+.page-d-acceuil .overlap {
+    background-size: 100% 100%;
+    height: 749px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+}
+
+.page-d-acceuil .text-wrapper {
+    color: #ffffff;
+    font-family: "Rubik-Medium", Helvetica;
+    font-size: 12px;
+    font-weight: 500;
+    height: 20px;
+    left: 1187px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 48px;
+    white-space: nowrap;
+}
+
+.page-d-acceuil .notification {
+    color: #ffffff;
+    font-family: "Aclonica-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 638px;
+    letter-spacing: 2px;
+    line-height: 21px;
+    position: absolute;
+    top: 49px;
+    white-space: nowrap;
+    width: 186px;
+}
+
+.page-d-acceuil .PROFI-le {
+    color: #ffffff;
+    font-family: "Aclonica-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 869px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    position: absolute;
+    top: 50px;
+    width: 112px;
+}
+
+.page-d-acceuil .overlap-group {
+    height: 35px;
+    left: 470px;
+    position: absolute;
+    top: 49px;
+    width: 123px;
+}
+
+.page-d-acceuil .div {
+    color: #d78780;
+    font-family: "Aclonica-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 2px;
+    line-height: 21px;
+    position: absolute;
+    top: 0;
+    width: 123px;
+}
+
+.page-d-acceuil .line {
+    height: 1px;
+    left: 43px;
+    object-fit: cover;
+    position: absolute;
+    top: 27px;
+    width: 29px;
+}
+
+.page-d-acceuil .overlap-2 {
+    height: 420px;
+    left: 99px;
+    position: absolute;
+    top: 233px;
+    width: 1341px;
+}
+
+.page-d-acceuil .unsplash {
+    height: 420px;
+    left: 129px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 1212px;
+}
+
+.page-d-acceuil .trouver-l-quilibre {
+    color: #d78780;
+    font-family: "Abril Fatface-Regular", Helvetica;
+    font-size: 40px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 2px;
+    line-height: 40px;
+    position: absolute;
+    top: 130px;
+    white-space: nowrap;
+    width: 642px;
+}
+
+.page-d-acceuil .button-instance {
+    background-color: #4936a9 !important;
+    border: 1px solid !important;
+    border-radius: 415px !important;
+    height: 36px !important;
+    left: 65px !important;
+    position: absolute !important;
+    top: 278px !important;
+    width: 137px !important;
+}
+
+.page-d-acceuil .design-component-instance-node {
+    font-family: "Rubik-Medium", Helvetica !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: -13px !important;
+    margin-top: -15px !important;
+}
+
+.page-d-acceuil .button-2 {
+    background-color: #1f252b !important;
+    border: 1px solid !important;
+    border-color: #f5f5f5 !important;
+    border-radius: 415px !important;
+    height: 36px !important;
+    left: 1287px !important;
+    position: absolute !important;
+    top: 41px !important;
+    width: 137px !important;
+}
+
+.page-d-acceuil .button-3 {
+    font-family: "Rubik-Medium", Helvetica !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    letter-spacing: 2px !important;
+    margin-bottom: -13px !important;
+    margin-left: -2.5px !important;
+    margin-right: -2.5px !important;
+    margin-top: -15px !important;
+}
+
+.page-d-acceuil .img {
+    height: 1px;
+    left: 513px;
+    object-fit: cover;
+    position: absolute;
+    top: 40px;
+    width: 29px;
+}
+
+.page-d-acceuil .section {
+    align-items: flex-start;
+    display: inline-flex;
+    left: 25px;
+    padding: 60px 150px;
+    position: absolute;
+    top: 792px;
+}
+
+.page-d-acceuil .div-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    padding: 76.81px 0px 76.81px 674.95px;
+    position: relative;
+}
+
+.page-d-acceuil .integrations-all {
+    height: 498px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 550px;
+}
+
+.page-d-acceuil .div-3 {
+    height: 344px;
+    position: relative;
+    width: 465.05px;
+}
+
+.page-d-acceuil .connect-your-tools {
+    color: #050038;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 48px;
+    font-weight: 700;
+    height: 168px;
+    left: 0;
+    letter-spacing: -1px;
+    line-height: 56px;
+    position: absolute;
+    top: -1px;
+}
+
+.page-d-acceuil .p {
+    color: #05003899;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 72px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 195px;
+    width: 459px;
+}
+
+.page-d-acceuil .span {
+    align-items: flex-end;
+    display: inline-flex;
+    gap: 5.02px;
+    left: 0;
+    position: absolute;
+    top: 320px;
+}
+
+.page-d-acceuil .div-wrapper {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: #4262ff;
+    height: 23px;
+    position: relative;
+    width: 104.52px;
+}
+
+.page-d-acceuil .text-wrapper-2 {
+    color: #4262ff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 22px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: -1px;
+    white-space: nowrap;
+    width: 105px;
+}
+
+.page-d-acceuil .span-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.page-d-acceuil .text-wrapper-3 {
+    color: #4262ff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.page-d-acceuil .overlap-3 {
+    height: 746px;
+    left: -3px;
+    position: absolute;
+    top: 2360px;
+    width: 1445px;
+}
+
+.page-d-acceuil .rectangle {
+    background-color: #4936a9;
+    height: 584px;
+    left: 0;
+    position: absolute;
+    top: 141px;
+    width: 1445px;
+}
+
+.page-d-acceuil .rectangle-2 {
+    background-color: #1e242a;
+    border-radius: 10px 10px 0px 0px;
+    height: 36px;
+    left: 2px;
+    position: absolute;
+    top: 710px;
+    width: 1441px;
+}
+
+.page-d-acceuil .group {
+    background-color: #1e242a;
+    height: 36px;
+    left: 2px;
+    position: absolute;
+    top: 710px;
+    width: 1441px;
+}
+
+.page-d-acceuil .group-2 {
+    height: 16px;
+    left: 31px;
+    position: relative;
+    top: 7px;
+    width: 1320px;
+}
+
+.page-d-acceuil .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 16px;
+    left: 1072px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 85px;
+}
+
+.page-d-acceuil .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 16px;
+    left: 1177px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 82px;
+}
+
+.page-d-acceuil .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 16px;
+    left: 1279px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 33px;
+}
+
+.page-d-acceuil .text-wrapper-7 {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 16px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 16.9px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 395px;
+}
+
+.page-d-acceuil .rectangle-3 {
+    background-color: #d7878091;
+    border-radius: 10px;
+    height: 515px;
+    left: 89px;
+    position: absolute;
+    top: 0;
+    width: 1138px;
+}
+
+.page-d-acceuil .unsplash-ns {
+    height: 504px;
+    left: 124px;
+    object-fit: cover;
+    position: absolute;
+    top: 37px;
+    width: 1197px;
+}
+
+.page-d-acceuil .overlap-4 {
+    height: 880px;
+    left: -25px;
+    position: absolute;
+    top: 1451px;
+    width: 1414px;
+}
+
+.page-d-acceuil .div-4 {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(195, 85, 72, 0.3) 0%, rgb(255, 255, 255) 58.1%);
+    height: 880px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1414px;
+}
+
+.page-d-acceuil .div-5 {
+    height: 308px;
+    left: 410px;
+    position: relative;
+    top: 15px;
+    width: 640px;
+}
+
+.page-d-acceuil .overlap-5 {
+    height: 202px;
+    left: 83px;
+    position: absolute;
+    top: 0;
+    width: 475px;
+}
+
+.page-d-acceuil .overlap-wrapper {
+    height: 156px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 474px;
+}
+
+.page-d-acceuil .overlap-6 {
+    height: 127px;
+    position: relative;
+    top: 20px;
+    width: 528px;
+}
+
+.page-d-acceuil .svg {
+    height: 32px;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    width: 80px;
+}
+
+.page-d-acceuil .svg-2 {
+    height: 35px;
+    left: 148px;
+    position: absolute;
+    top: 92px;
+    width: 380px;
+}
+
+.page-d-acceuil .h {
+    height: 112px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 474px;
+}
+
+.page-d-acceuil .overlap-group-2 {
+    height: 120px;
+    position: relative;
+    top: -5px;
+}
+
+.page-d-acceuil .text-wrapper-8 {
+    color: #333333;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 56px;
+    font-weight: 700;
+    height: 64px;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: 56px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    white-space: nowrap;
+    width: 448px;
+}
+
+.page-d-acceuil .text-wrapper-9 {
+    color: #333333;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 55px;
+    font-weight: 700;
+    height: 64px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 56px;
+    position: absolute;
+    text-align: center;
+    top: 56px;
+    white-space: nowrap;
+    width: 474px;
+}
+
+.page-d-acceuil .text-wrapper-10 {
+    color: #333333;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    height: 47px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    top: 155px;
+    width: 475px;
+}
+
+.page-d-acceuil .div-6 {
+    height: 80px;
+    left: 85px;
+    position: absolute;
+    top: 228px;
+    width: 470px;
+}
+
+.page-d-acceuil .div-7 {
+    border: 1px solid;
+    border-color: #5c6ae433;
+    border-radius: 24px;
+    height: 34px;
+    left: 130px;
+    position: relative;
+    width: 169px;
+}
+
+.page-d-acceuil .text-wrapper-11 {
+    color: #5c6ae4;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    height: 20px;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    top: 6px;
+    white-space: nowrap;
+    width: 144px;
+}
+
+.page-d-acceuil .unsplash-vpwafrqtbzm {
+    height: 411px;
+    left: 265px;
+    object-fit: cover;
+    position: absolute;
+    top: 289px;
+    width: 899px;
+}

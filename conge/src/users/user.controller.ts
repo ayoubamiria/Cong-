@@ -1,7 +1,10 @@
-import { Controller, Get, Post, Param, Body,Delete, HttpException } from '@nestjs/common';
+import { Controller, Get, Post, Param, Body,Delete, HttpException, Patch, HttpStatus, Put, InternalServerErrorException } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { User } from './user.schema';
+import { UpdatePasswordDto, UpdateUserDto } from './dto/update-user.dto';
+import * as bcrypt from 'bcrypt';
+
 
 @Controller('users')
 export class UserController {
@@ -11,6 +14,7 @@ export class UserController {
     findAll(): Promise<User[]> {
         return this.userService.findAll();
     }
+
 
     @Get(':id')
     findOne(@Param('id') id: string): Promise<User> {
@@ -53,4 +57,47 @@ export class UserController {
     }
 
     // Ajoutez plus de routes si nécessaire
+    //modifier profile 
+    @Put(':id/profil/information')
+    async updateUser(
+        @Param('id') id: string,
+        @Body() UpdateuserDto: UpdateUserDto,
+    ): Promise<User> {
+        try {
+            const updatedUser = await this.userService.updateUser(id, UpdateuserDto);
+            return updatedUser;
+        } catch (error) {
+            throw new HttpException(error.message, HttpStatus.BAD_REQUEST); // Handle potential errors
+        }
+    }
+    // modification mot de passe 
+    @Put(':id/profil/password')
+    async updatePassword(
+        @Param('id') userId: string,
+        @Body() updatePasswordDto: UpdatePasswordDto
+    ) {
+        try {
+            const { newPassword } = updatePasswordDto;
+
+            // Log the received newPassword
+            console.log('New Password:', newPassword);
+
+            if (!newPassword) {
+                throw new Error('New password is required');
+            }
+
+            const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+            // Log the hashedPassword
+            console.log('Hashed Password:', hashedPassword);
+
+            return this.userService.updatePassword(userId, updatePasswordDto, hashedPassword);
+        } catch (error) {
+            console.error('Error updating password:', error);
+            throw new InternalServerErrorException('Failed to update password');
+        }
+    }
+  
+
+ 
 }

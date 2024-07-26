@@ -1,0 +1,104 @@
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.Historique {
+    color :#4936A9
+}
+.table-container  {
+     text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+
+.status.accepter {
+    background-color: #28a745;
+}
+
+.status.en-attente {
+    background-color: #ffc107;
+    color: black;
+}
+
+.status.refuser {
+    background-color: #dc3545;
+}
+
+@media screen and (max-width: 768px) {
+    .table-container {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    text-align: left;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: rgb(8, 5, 5);
+    text-align: center;
+    display: inline-block;
+    background-color: #ffc107;
+    color: black;
+}
+
+.status.approuvé {
+    background-color: #28a745;
+        color: rgb(255, 255, 255);
+}
+
+
+
+.status.rejeté {
+    background-color: #dc3545;
+     color: rgb(255, 255, 255);
+}

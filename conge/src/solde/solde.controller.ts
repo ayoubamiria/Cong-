@@ -16,11 +16,18 @@ export class SoldeController {
         return this.soldeService.findAll();
     }
 
-    @Get(':id')
-    async findOne(@Param('id') id: string) {
-        return this.soldeService.findOne(id);
+    /////////
+    @Get(':userId/:leaveType')
+  async getDaysByType(@Param('userId') userId: string, @Param('leaveType') leaveType: string) {
+    const days = await this.soldeService.getDaysByType(userId, leaveType);
+        return { days };
+        
+  }
+    @Get(':userId')
+    async getSoldeByUserId(@Param('userId') userId: string) {
+        const solde = await this.soldeService.findOneByUser(userId);
+        return solde;
     }
-
     @Put(':id')
     async update(@Param('id') id: string, @Body() updateSoldeDto: any) {
         return this.soldeService.update(id, updateSoldeDto);
@@ -30,4 +37,10 @@ export class SoldeController {
     async remove(@Param('id') id: string) {
         return this.soldeService.remove(id);
     }
+    // Déclaration d'une route GET pour obtenir les jours de congé par type pour un utilisateur
+   /* @Get(':id')
+    async getDaysByType(@Param('id') userId: string) {
+        // Appel du service pour obtenir les jours de congé et retour des résultats
+        return this.soldeService.getDaysByType(userId);
+    }*/
 }

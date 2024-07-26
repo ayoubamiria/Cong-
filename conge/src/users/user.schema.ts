@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { SoldeService } from 'src/solde/solde.service';
 
 export type UserDocument = User & Document;
 
@@ -31,3 +32,15 @@ export class User {
 
 export const UserSchema = SchemaFactory.createForClass(User);
 UserSchema.set('collection', 'user'); // Spécifiez la collection personnalisée
+// chaque fois qu'un user est cree il aura un solde 
+UserSchema.post('save', async function (user: UserDocument) {
+    const soldeService = new SoldeService(user.model('Solde')); // Créez une instance de SoldeService
+
+    await soldeService.create({
+        user: user.id,
+        totalVacationDays: 30,
+        totalSickDays: 7,
+        totalPersonalDays: 14,
+        totalOtherDays: 10,
+    });
+    });

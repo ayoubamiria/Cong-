@@ -8,22 +8,20 @@ export class Solde {
     @Prop({ type: Types.ObjectId, ref: 'User', required: true })
     user: Types.ObjectId;
 
-    @Prop({
-        type: String, required: true, enum: ['vacance', 'maladie', 'personnel', 'other'], default:'vacance'
-    })
-    type: string;
-
-    @Prop({ type: Number, required: true, default:30 })
+    @Prop({ type: Number, required: true, default: 30 })
     totalVacationDays: number;
 
-    @Prop({ type: Number, required: true , default:7})
+    @Prop({ type: Number, required: true, default: 7 })
     totalSickDays: number;
 
-    @Prop({ type: Number, required: true , default:14})
+    @Prop({ type: Number, required: true, default: 14 })
     totalPersonalDays: number;
 
-    @Prop({ type: Number, required: true ,default:10})
-    totalOtherDays: number;}
+    @Prop({ type: Number, required: true, default: 10 })
+    totalOtherDays: number;
+}
+
+
 
 export const SoldeSchema = SchemaFactory.createForClass(Solde);
 SoldeSchema.set('collection', 'solde');

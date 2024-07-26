@@ -19,11 +19,11 @@ export class DemandeConge {
     endDate: Date;
 
     @Prop({
-        type: String, required: true, enum: ['vacance', 'maladie', 'personnel', 'other']
+        type: String, required: true, enum: ['vacance', 'maladie', 'personnel', 'other'], default: 'maladie'
     })
     type: string;
 
-    @Prop({ type: String, required: true, enum: ['en attente', 'approuvé', 'rejeté'], default: 'en attente' })
+    @Prop({ type: String, required: true, enum: ['en-attente', 'approuvé', 'rejeté'], default: 'en-attente' })
     status: string;
 
     @Prop({ type: String })

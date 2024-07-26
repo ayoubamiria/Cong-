@@ -26,11 +26,10 @@ const Home = () => {
             <header className="header">
                 <div className="header-left">
                     <span className="nav-item">ACCEUIL</span>
-                    <span className="nav-item">NOTIFICATION</span>
                 </div>
                 <div className="header-right">
                     <span className="nav-item">PROFIL</span>
-                    <button className="logout-button">SE DECONNECTER</button>
+                    <button className="logout-button" onClick={() => navigate("/")}>SE DECONNECTER</button>
                 </div>
             </header>
             <div className="content">
@@ -38,9 +37,9 @@ const Home = () => {
                     <img src="./frconge/src/images/home.jpg" alt="Buildings" />
                 </div>
                 <div className="menu-section">
-                    <button className="menu-item">Creer Congé</button>
-                    <button className="menu-item">Mes Congés</button>
-                    <button className="menu-item">Ma Calendrier</button>
+                    <button className="menu-item" onClick={() => navigate("/creeconge")}>Creer Congé</button>
+                    <button className="menu-item" onClick={() => navigate("/historique")}>Mes Congés</button>
+                    <button className="menu-item" onClick={() => navigate("/calendar")}>Ma Calendrier</button>
                 </div>
             </div>
             <Footer/>
