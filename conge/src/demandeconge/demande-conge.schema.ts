@@ -23,7 +23,7 @@ export class DemandeConge {
     })
     type: string;
 
-    @Prop({ type: String, required: true, enum: ['en-attente', 'approuvé', 'rejeté'], default: 'en-attente' })
+    @Prop({ type: String, required: true, enum: ['en attente', 'approuvé', 'rejeté'], default: 'en attente' })
     status: string;
 
     @Prop({ type: String })

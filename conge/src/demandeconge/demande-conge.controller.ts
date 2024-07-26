@@ -1,5 +1,6 @@
 import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
 import { DemandeCongeService } from './demande-conge.service';
+import { DemandeConge } from './demande-conge.schema';
 
 @Controller('demande-conge')
 export class DemandeCongeController {
@@ -8,6 +9,11 @@ export class DemandeCongeController {
     @Post('creeconge')
     async create(@Body() createDemandeCongeDto: any) {
         return this.demandeCongeService.creeConge(createDemandeCongeDto);
+    }
+
+    @Get('/attente')
+    async findOneAppEnAttente() {
+        return this.demandeCongeService.findOneAppEnAttente();
     }
 
     @Get()
@@ -35,5 +41,13 @@ export class DemandeCongeController {
     @Delete(':id')
     async remove(@Param('id') id: string) {
         return this.demandeCongeService.remove(id);
+    }
+    @Put('approve/:id')
+    async approveLeaveRequest(@Param('id') id: string): Promise<DemandeConge> {
+        return this.demandeCongeService.approveLeaveRequest(id);
+    }
+    @Put('rejeter/:id')
+    async declineLeaveRequest(@Param('id') id: string): Promise<DemandeConge> {
+        return this.demandeCongeService.declineLeaveRequest(id);
     }
 }

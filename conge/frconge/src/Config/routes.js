@@ -9,6 +9,10 @@ import Acceuil from '../Pages/acceuil';
 import { Profile } from '../Pages/profile-info';
 import HistoriqueConge from '../Pages/historique';
 import CongeCalendar from '../Pages/calendar';
+import HomeRh from '../Pages/interface-rh/homerh';
+import Verif from '../Pages/interface-rh/valider-rejeter';
+import Attente from '../Pages/interface-rh/enattente';
+import Securite from '../Pages/securite';
 
 
 const router = createBrowserRouter([
@@ -49,7 +53,23 @@ const router = createBrowserRouter([
         path: '/calendar',
         element: <CongeCalendar />,
     },
-   
+    {
+        path: '/homerh',
+        element: <HomeRh />,
+    },
+    {
+        path: '/verif',
+        element: <Verif />,
+    },
+    {
+        path: '/attente',
+        element: <Attente />,
+    },
+    {
+        path: '/securite',
+        element: <Securite />,
+    },
+
     
 ]);
 export default router;
