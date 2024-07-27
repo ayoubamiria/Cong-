@@ -107,7 +107,6 @@ const Login = () => {
                 </p>
             </div>
             <div className="login-image">
-                <img src="/src/images/imglogin.jpeg" alt="Desk with laptop and coffee mug" />
             </div>
 {/*            <div><Footer/></div> 
  */}        </div>

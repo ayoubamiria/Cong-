@@ -87,7 +87,7 @@ body {
     color: #D78780;
     font-size: medium;
     border: 2px solid #D78780;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     position: relative;
     transition: all 0.2s ease-in-out;
@@ -293,52 +293,23 @@ body {
     font-style: normal;
 }
 
-/*.container {
-    width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
 
-label {
-    display: block;
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: bold;
+.content{
+    background-image: url('../src/images/home.jpg');
+        background-size: cover;
+        /* This ensures the image covers the entire header */
+        background-position: center;
+        /* This centers the image */
+        background-repeat: no-repeat;
+        /* This prevents the image from repeating */
+        padding: 50px;
 }
-
-input[type="text"],
-input[type="email"],
-select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+.login-image{
+    background-image: url('../src/images/imglogin.jpeg');
+        background-size: cover;
+        /* This ensures the image covers the entire header */
+        background-position: center;
+        /* This centers the image */
+        background-repeat: no-repeat;
+        border-radius: 10px;
 }
-
-input[type="radio"] {
-    margin-top: 5px;
-}
-
-select {
-    margin-top: 5px;
-}
-
-button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #45a049;
-}*/

@@ -85,60 +85,63 @@ const CreerConge = () => {
 
                     <button className="logout-button" onClick={() => navigate("/")}>SE DECONNECTER</button>
                 </div>
-            </header></div>
+    </header></div>
+        <div className="creer"><b>Creer Votre Congé</b></div>
+
         <div className="form-container">
           
             <div className="remplir" ><h2 style={{ fontFamily: 'Aclonica, sans-serif' }}>Veuillez remplir ce formulaire</h2></div>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="nom">Nom: *</label>
-                    <input type="text" id="nom" value={nom} onChange={(e) => setNom(e.target.value)} />
+                <div className="form-group1">
+                    <label htmlFor="nom">Nom & Prenom : *</label>
+                    <input className="input1"type="text" id="nom" placeholder="Entrer votre nom et prenom..." value={nom} onChange={(e) => setNom(e.target.value)} />
                     {errors.nom && <span className="error">{errors.nom}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group1">
                     <label htmlFor="email">Email: *</label>
-                    <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input className="input1" type="email" id="email" placeholder="Entrer Email disponible..." value={email} onChange={(e) => setEmail(e.target.value)} />
                     {errors.email && <span className="error">{errors.email}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group1">
                     <label htmlFor="startdate">Date debut: *</label>
-                    <input type="date" id="startdate" value={dateDebut} onChange={(e) => setDateDebut(e.target.value)} />
+                    <input className="input1" type="date" id="startdate" value={dateDebut} onChange={(e) => setDateDebut(e.target.value)} />
                     {errors.dateDebut && <span className="error">{errors.dateDebut}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group1">
                     <label htmlFor="enddate">Date fin: *</label>
-                    <input type="date" id="enddate" value={dateFin} onChange={(e) => setDateFin(e.target.value)} />
+                    <input className="input1" type="date" id="enddate" value={dateFin} onChange={(e) => setDateFin(e.target.value)} />
                     {errors.dateFin && <span className="error">{errors.dateFin}</span>}
                 </div>
 
-                <div className="form-group">
-                    <label htmlFor="typeConge">Type de congé: *</label>
-                    <select id="typeConge" value={typeConge} onChange={(e) => setTypeConge(e.target.value)}>
-                        <option value="maladie">maladie</option>
-                        <option value="vacance">vacances</option>
-                        <option value="personnel">personnel</option>
-                        <option value="other">other</option>
+                <div className="form-group1">
+                    <label htmlFor="typeConge">Selectionner Le Type de congé: *</label>
+                    <select className="input1"  id="typeConge" value={typeConge} onChange={(e) => setTypeConge(e.target.value)}>
+                        <option value="maladie">Maladie</option>
+                        <option value="vacance">Vacances</option>
+                        <option value="personnel">Personnel</option>
+                        <option value="other">Autre</option>
                     </select>
                     {errors.typeConge && <span className="error">{errors.typeConge}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group1">
                     <label htmlFor="raison">Raison:</label>
-                    <textarea id="raison" value={raison} onChange={(e) => setRaison(e.target.value)} />
+                    <textarea className="input1"  id="raison" placeholder="Expliquer brievement le besoin de congé..." value={raison} onChange={(e) => setRaison(e.target.value)} />
                 </div>
 
-                <div className="form-group">
-                    <label htmlFor="document">Document utile:</label>
-                    <input type="file" id="document" onChange={(e) => setDocument(e.target.files[0])} />
+                <div className="form-group1">
+                    <label htmlFor="document">Importer Document utile:</label>
+                    <input type="file" id="document"  className="filebt" onChange={(e) => setDocument(e.target.files[0])} />
                 </div>
 
-                <input type='reset' value="Annuler" />
-                <button type="submit">Envoyer</button>
+                <input className="breset" type='reset' value="Annuler" />
+                <button className="subbt" type="submit">Envoyer</button>
             </form>
-        </div></div> 
+        </div>
+</div> 
     );
 
 }

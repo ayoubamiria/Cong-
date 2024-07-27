@@ -57,7 +57,7 @@ const Home = () => {
             </header>
             <div className="content">
                 <div className="image-section">
-                    <img src="../images/home.jpg" alt="Buildings" />
+                  
                 </div>
                 <div className="menu-section">
                     <button className="menu-item" onClick={() => navigate("/creeconge")}><b>Creer Congé</b></button>
