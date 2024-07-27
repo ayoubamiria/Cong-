@@ -55,9 +55,9 @@ const Register = () => {
         <div className='register-content'>
             <div>
                 <h1>FORMULAIRE D'INSCRIPTION</h1>
-                <p>Connecter en tant que employee ou rh</p>
+               <div className='ppp'><p>Creer votre Compte par ici</p></div> 
             </div>
-            <div>
+            <div className='form'>
 
 
 
@@ -69,6 +69,7 @@ const Register = () => {
                             type="text"
                             value={firstName}
                             onChange={(e) => setFirstName(e.target.value)}
+                            placeholder='Entrer votre prenom ...'
                         />
                     </div>
                     <div className='form-group'>
@@ -78,6 +79,8 @@ const Register = () => {
                             type="text"
                             value={lastName}
                             onChange={(e) => setLastName(e.target.value)}
+                            placeholder='Entrer votre nom ... '
+
                         />
                     </div>
                     <div className='form-group'>
@@ -87,6 +90,8 @@ const Register = () => {
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            placeholder='Entrer votre email...'
+
                         />
                     </div>
                     <div className='form-group'>
@@ -96,6 +101,8 @@ const Register = () => {
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            placeholder='Entrer votre mot de passe ...'
+
                         />
                     </div>
                     <div className='form-radio'>
@@ -124,6 +131,8 @@ const Register = () => {
                             type="date"
                             value={birthdate}
                             onChange={(e) => setBirthDate(e.target.value)}
+                            placeholder='Entrer votre date de naissance ...'
+
                         />
                     </div>
                     
@@ -135,8 +144,9 @@ const Register = () => {
                             onChange={(e) => setPicture(e.target.files[0])}
                         />
                     </div> }
+                    <input className='btreset' type='reset' value='Reset' />
                     <button className='btn signup' type='submit'>Sign Up</button>
-                    <input className='btn reset' type='reset' value='Reset' />
+                
                 </form>
             </div>
         </div>

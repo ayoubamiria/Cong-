@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import "./page-css/creeconge.css"
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -41,8 +41,15 @@ const CreerConge = () => {
             return;
         }
 
-        //const storedUserId = localStorage.getItem('userId');
-        const userId = '66a100f83932b021c7b5f48d'; // Remplacer par l'ID utilisateur !!!!!!!!!!!!!!!!!!!!!
+        const userData = localStorage.getItem("user_data");
+        const userDataParsed = JSON.parse(userData);
+        const userId = userDataParsed._id; // Assurez-vous que vous récupérez l'ID utilisateur correctement
+
+        if (!userId) {
+            toast.error('User ID is missing. Please log in again.');
+            return;
+        }
+       // const userId = '66a100f83932b021c7b5f48d'; // Remplacer par l'ID utilisateur !!!!!!!!!!!!!!!!!!!!!
         const formData = {
             user: userId,
             startDate: dateDebut,
@@ -59,6 +66,7 @@ const CreerConge = () => {
             //directement ???!!!!!!!!!!!!!!!!!!!!!
             navigate('/home');
         } catch (error) {
+           
             console.error('Erreur lors de l\'envoi de la demande de congé', error);
         }
     
@@ -66,10 +74,21 @@ const CreerConge = () => {
         console.log({ nom, email, dateDebut, dateFin, typeConge, document, raison });
     };
 
-    
-    return (
+    return ( <div><div className="navbar"><header className="header" >
+                <div className="header-left">
+
+                    <span className="nav-item"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href='/home'>ACCEUIL</a></span>
+                    <span className="nav-item2"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href="/profil">PROFIL</a></span>
+                    
+                </div>
+                <div className="header-right">
+
+                    <button className="logout-button" onClick={() => navigate("/")}>SE DECONNECTER</button>
+                </div>
+            </header></div>
         <div className="form-container">
-            <h2>Veuillez remplir ce formulaire</h2>
+          
+            <div className="remplir" ><h2 style={{ fontFamily: 'Aclonica, sans-serif' }}>Veuillez remplir ce formulaire</h2></div>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="nom">Nom: *</label>
@@ -119,7 +138,7 @@ const CreerConge = () => {
                 <input type='reset' value="Annuler" />
                 <button type="submit">Envoyer</button>
             </form>
-        </div>
+        </div></div> 
     );
 
 }

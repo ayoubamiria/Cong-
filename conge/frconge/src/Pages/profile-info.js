@@ -4,7 +4,10 @@ import axios from 'axios';
 import "./styleprof.css";
 
 export const Profile = () => {
-    const userId = '66a100f83932b021c7b5f48d'; // example after extracting the ID from local storage
+    const userData = localStorage.getItem("user_data");
+    const userDataParsed = JSON.parse(userData);
+    const userId = userDataParsed._id; // Assurez-vous que vous récupérez l'ID utilisateur correctement
+    //const userId = '66a100f83932b021c7b5f48d'; // example after extracting the ID from local storage
     const [firstName, setFirstName] = useState('');
     const [lastName, setlastName] = useState('');
     const [email, setEmail] = useState('');
@@ -44,8 +47,8 @@ export const Profile = () => {
           
             <div className="overlap">
                 <div className="group-2">
-                    <div className="PROFI-le">PROFILE</div>
-                    <div className="text-wrapper-4">ACCEUIL</div>
+                    <div className="PROFI-le"><a href='/profil'>PROFILE</a></div>
+                    <div className="text-wrapper-4"><a href='/home'>ACCEUIL</a></div>
                 </div>
             </div>
             <div className="overlap-group">
@@ -136,8 +139,8 @@ export const Profile = () => {
                     <div className="rectangle" />
                     <div className="rectangle-2" />
                     <div className="rectangle-3" />
-                    <div className="text-wrapper-17">Securite</div>
-                    <div className="text-wrapper-18">Solde</div>
+                    <div className="text-wrapper-17"><a href='/securite'>Securite</a></div>
+                    <div className="text-wrapper-18"><a href='/solde'>Solde</a></div>
                     <div className="text-wrapper-19"><a href='/profil'>Informations</a></div>
                     <div className="button"><input type='reset' className="reset" value="Annuler" />
                         <button  className="submit"type="submit" >Envoyer</button></div>

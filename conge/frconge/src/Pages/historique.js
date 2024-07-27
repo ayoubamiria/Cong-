@@ -5,14 +5,21 @@ import { differenceInDays } from 'date-fns';
 
 
 const HistoriqueConge = () => {
-    const userId ='66a100f83932b021c7b5f48d'//exemple apres extraire l'id a partir du local storage
+    
+   // const userId ='66a100f83932b021c7b5f48d'//exemple apres extraire l'id a partir du local storage
     const [conges, setConges] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const userData = localStorage.getItem("user_data");
+    const userDataParsed = JSON.parse(userData);
+    const userId = userDataParsed._id; // Assurez-vous que vous récupérez l'ID utilisateur correctement
+    
+
 
     useEffect(() => {
         const fetchConges = async () => {
             try {
+                console.log("correct", userId)
                 const response = await axios.get(`http://localhost:3000/demande-conge/historique/${userId}`);
                 setConges(response.data);
             } catch (err) {

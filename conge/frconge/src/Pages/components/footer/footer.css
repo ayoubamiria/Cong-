@@ -1,15 +1,15 @@
-.fouter {
+
+.group-wrapper {
+        background-color: #1e242a;
+        height: 36px;
+        left: 0;
+        position: absolute;
+        top: 1616px;
+        width: 1441px;
+    }
+    .div {
     height: 16px;
     left: 31px;
     position: relative;
     top: 7px;
-    width: 1320px;
-}
-.group {
-    background-color: #1e242a;
-    height: 36px;
-    left: 2px;
-    position: absolute;
-    top: 710px;
-    width: 1441px;
-}
+    width: 1320px;}

@@ -1,25 +1,32 @@
 import React from "react";
 import "./style.css";
-
+   import { useNavigate } from "react-router-dom";
 
 const Acceuil =  () => {
-    
+ 
+  
+        const navigate = useNavigate();
     return (
       
         <div className="page-d-acceuil">
             
                 <div className="overlap">
-                    <div className="text-wrapper">S’INSCRIRE</div>
-                    <div className="notification">NOTIFICATION</div>
-                    <div className="PROFI-le">PROFILE</div>
+                <div className="text-wrapper"><a className="inscrire" href="/signup">S’INSCRIRE</a>
+                  
+                    <button className='btn signup' onClick={() => navigate("/signin")}>Se Connecter</button></div>
+
+
+                <div className="PROFI-le"><a href="/signin">PROFILE</a></div>
                     <div className="overlap-group">
-                        <div className="div">ACCEUIL</div>
+                    <div className="div"><a href="/">ACCEUIL</a></div>
                         <img className="line" alt="Line" src="line-2.svg" />
                 </div>
                 
                     <div className="overlap-2">
                     <img className="unsplash" alt="Unsplash" src="./images/acceuil/1.png" />
-                        <p className="trouver-l-quilibre">TROUVER L’ÉQUILIBRE PARFAIT POUR VOTRE FUTURE CONGES</p>
+                    <p className="trouver-l-quilibre">TROUVER L’ÉQUILIBRE PARFAIT </p>
+                    <p className="trouver-l-quilibre2"> POUR VOTRE FUTURE CONGES</p>
+
                     </div>
                     <img className="img" alt="Line" src="line-1.svg" />
                 </div>
@@ -36,7 +43,7 @@ const Acceuil =  () => {
                             </p>
                             <div className="span">
                                 <div className="div-wrapper">
-                                    <div className="text-wrapper-2">Learn more</div>
+                                    <div className="text-wrapper-2"><a href="/signin">Voir Plus</a></div>
                                 </div>
                                 <div className="span-2">
                                     <div className="text-wrapper-3">→</div>
@@ -54,7 +61,7 @@ const Acceuil =  () => {
                             <div className="text-wrapper-4">Privacy Policy</div>
                             <div className="text-wrapper-5">Terms of Use</div>
                             <div className="text-wrapper-6">Legal</div>
-                            <p className="text-wrapper-7">Copyright © 2024 Nura Operations Pty Ltd. All rights reserved.</p>
+                            <p className="text-wrapper-7">Copyright © 2024 Ayoub Amiria. All rights reserved.</p>
                         </div>
                     </div>
                     <div className="rectangle-3" />
@@ -81,7 +88,7 @@ const Acceuil =  () => {
                             </div>
                             <div className="div-6">
                                 <div className="div-7">
-                                    <div className="text-wrapper-11">Keyboard Shortcuts</div>
+                                    <div className="text-wrapper-11"><a href='/signin'>Voir Plus</a></div>
                                 </div>
                             </div>
                         </div>
