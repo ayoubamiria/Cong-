@@ -3,6 +3,8 @@ import axios from 'axios';
 import './page-css/historique.css'
 import { differenceInDays } from 'date-fns';
 import NavbarG from './components/navbar/navbar';
+import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 const HistoriqueConge = () => {

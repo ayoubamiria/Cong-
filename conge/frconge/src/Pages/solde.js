@@ -5,33 +5,47 @@ import "../Pages/page-css/solde.css";
 import NavbarG from './components/navbar/navbar';
 import image1 from '../images/unknown.jpeg';
 
-
- const Solde = () => {
+const Solde = () => {
     const userData = localStorage.getItem("user_data");
-    const userDataParsed = JSON.parse(userData);
-    const userId = userDataParsed._id; // Assurez-vous que vous récupérez l'ID utilisateur correctement
+    const userDataParsed = userData ? JSON.parse(userData) : null;
 
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const [firstName, setFirstName] = useState(userDataParsed ? userDataParsed.firstName : '');
+    const [lastName, setLastName] = useState(userDataParsed ? userDataParsed.lastName : '');
     const [selectedLeaveType, setSelectedLeaveType] = useState('maladie');
-    const [days, setDays] = useState(0); // Example days count
+    const [days, setDays] = useState(0);
+
+    useEffect(() => {
+        if (!userDataParsed) {
+            toast.error("User data not found. Please log in again.");
+        }
+    }, [userDataParsed]);
 
     const handleLeaveTypeChange = async (e) => {
         setSelectedLeaveType(e.target.value);
         try {
-            const response = await axios.get(`http://localhost:3000/solde/${userId}/${e.target.value}`);
-            const remainingDays = response.data.remainingDays; // Adjust according to your API response
-            setDays(remainingDays);
-            toast.success(`Remaining days updated: ${remainingDays}`);
+            const response = await axios.get(`http://localhost:3000/solde/${userDataParsed._id}/${e.target.value}`);
+            console.log("API Response:", response.data); // Log the response data
+            const remainingDays = response.data.remainingDays; // Adjust according to your API response structure
+            if (remainingDays !== undefined) {
+                setDays(remainingDays);
+                toast.success(`Remaining days updated: ${remainingDays}`);
+            } else {
+                toast.error("Failed to fetch remaining days. Please check the API response.");
+            }
         } catch (error) {
             console.error("Error:", error);
             toast.error("Failed to fetch remaining days");
         }
     };
 
+    if (!userDataParsed) {
+        return <div>Error: User data not found. Please log in again.</div>;
+    }
+
     return (
         <div className="profile">
             <Toaster />
+            <div className="text-wrapper-20">{firstName} {lastName}</div>
             <div className='navbarprof'> <NavbarG /></div>
             <div className="overlap-group">
                 <form>
@@ -41,8 +55,8 @@ import image1 from '../images/unknown.jpeg';
                                 <div className="overlap-group-21">
                                     <div className="div-wrapper1">
                                         <div className="text-wrapper-55">
-                                            <input className='input123' type="text" value={days} />Jour(s)
-                                        </div>                                           
+                                            <input className='input123' type="text" value={days} readOnly /> Jour(s)
+                                        </div>
                                     </div>
                                     <div className="text-wrapper-6"><b>Choisir le type de Congé</b></div>
                                 </div>
@@ -60,7 +74,6 @@ import image1 from '../images/unknown.jpeg';
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div className="rectangle" />
@@ -79,9 +92,9 @@ import image1 from '../images/unknown.jpeg';
                     <p className="p">Copyright © 2024 Nura Operations Pty Ltd. All rights reserved.</p>
                 </div>
             </div>
-            <div className="text-wrapper-20">{firstName} {lastName}</div>
             <img className="jpg" alt="Jpg" src={image1} />
         </div>
     );
 };
-export default Solde 
+
+export default Solde;

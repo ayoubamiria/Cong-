@@ -99,7 +99,9 @@ const Attente = () => {
             ) : (
                 <table>
                     <thead>
-                        <tr>
+                            <tr>
+                                <th>ID</th>
+
                             <th>Type</th>
                             <th>Status</th>
                             <th>Raison</th>
@@ -112,6 +114,7 @@ const Attente = () => {
                     <tbody>
                         {conges.map((conge) => (
                             <tr key={conge._id}>
+                                <td>{conge._id}</td>
                                 <td>{conge.type}</td>
                                 <td>
                                     <span className={`status ${conge.status.toLowerCase()}`}>

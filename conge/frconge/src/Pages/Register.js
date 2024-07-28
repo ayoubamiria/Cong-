@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import UserService from '../Services/UserService';
 import image2 from '../images/imglogin.jpeg'
+import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [firstName, setFirstName] = useState('');
@@ -11,9 +13,11 @@ const Register = () => {
     const [birthdate, setBirthDate] = useState('');
     const [picture, setPicture] = useState('');
 
-
+ const navigate = useNavigate();
     const Signup = async (event) => {
         event.preventDefault(); // Éliminer le refresh
+       
+
 
         const data = {
             firstName,
@@ -27,8 +31,12 @@ const Register = () => {
         try {
             const response = await UserService.Signup(data);
             console.log('Signup successful:', response);
+            toast.success('User created in successfully!');
+            navigate('/signin')
+
         } catch (error) {
             console.error('Signup error:', error);
+            toast.error('Signup error:', error);
         }
     };
 
@@ -54,7 +62,7 @@ const Register = () => {
 
     return (
         <div className='register-content'>
-            
+            <Toaster/>
             <div className='form'>
 
 <div className='ay'>

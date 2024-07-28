@@ -108,7 +108,7 @@ export class DemandeCongeService {
         // Calculate the number of leave days
         const startDate = new Date(leaveRequest.startDate);
         const endDate = new Date(leaveRequest.endDate);
-        const leaveDays = (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24) + 1;
+        const leaveDays = (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24) ;
 
         // Update the leave balance based on the leave type
         switch (leaveRequest.type) {

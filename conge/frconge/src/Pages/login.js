@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom'; // For navigation after login
-import Footer from './components/footer/footer';
 
 const Login = () => {
     const navigate = useNavigate();

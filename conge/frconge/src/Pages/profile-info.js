@@ -1,22 +1,24 @@
-import toast, { Toaster } from 'react-hot-toast';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./styleprof.css";
 import NavbarG from './components/navbar/navbar';
 import image1 from '../images/unknown.jpeg';
+import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 export const Profile = () => {
+    const navigate = useNavigate();
     const userData = localStorage.getItem("user_data");
     const userDataParsed = JSON.parse(userData);
     const userId = userDataParsed._id; // Assurez-vous que vous récupérez l'ID utilisateur correctement
-    //const userId = '66a100f83932b021c7b5f48d'; // example after extracting the ID from local storage
+ // example after extracting the ID from local storage
     const [firstName, setFirstName] = useState('');
     const [lastName, setlastName] = useState('');
     const [email, setEmail] = useState('');
     const [birthdate, setBirthDate] = useState('');
     const submitModif = async (e) => {
-        e.preventDefault();
+        //refresh****
         try {
             const response = await axios.put(`http://localhost:3000/users/${userId}/profil/information`, {
                 firstName,
@@ -28,6 +30,7 @@ export const Profile = () => {
             toast.success('Profile updated!');
         } catch (error) {
             console.error("Error updating profile:", error);
+            toast.error("Error updating profile:", error);
         }
     };    useEffect(() => {
         const fetchData = async () => {
@@ -141,7 +144,7 @@ export const Profile = () => {
                     <div className="text-wrapper-18"><a href='/solde'>Solde</a></div>
                     <div className="text-wrapper-19"><a href='/profil'>Informations</a></div>
                     <div className="button"><input type='reset' className="reset" value="Annuler" />
-                        <button  className="submit"type="submit" >Envoyer</button></div>
+                        <button  className="submit"type="submit" onClick={()=>{navigate("/profil")}}>Envoyer</button></div>
                     
                 </form>
             </div>
