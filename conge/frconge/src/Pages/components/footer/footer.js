@@ -1,4 +1,5 @@
 import React from 'react';
+
 //import "/frconge/src/Pages/styleprof.css"
 const Footer = () => {
     

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import 'C:/Users/User/Desktop/Conges/Congy/conge/frconge/src/Pages/page-css/historique.css'
 import { differenceInDays } from 'date-fns';
+import NavbarG from '../components/navbar/navbar';
 
 
 const Attente = () => {
@@ -18,6 +19,45 @@ const Attente = () => {
             console.error('Error rejecting leave request:', error);
         }
     }
+    const handleAccept = async (id) => {
+        if (!id) {
+            console.error('Invalid leave request ID');
+            return;
+        }
+
+        console.log(`Approving leave request with ID: ${id}`);
+
+        try {
+            const response = await axios.put(`http://localhost:3000/demande-conge/approve/${id}`);
+
+            if (response.status === 200) {
+                console.log('Leave request approved successfully:', response.data);
+
+                // Update the state to reflect the change
+                setConges((prevConges) =>
+                    prevConges.map((conge) =>
+                        conge._id === id ? { ...conge, status: 'approuvé' } : conge
+                    )
+                );
+            } else {
+                console.error('Unexpected response status:', response.status);
+            }
+        } catch (error) {
+            if (error.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx
+                console.error('Error approving leave request:', error.response.data);
+            } else if (error.request) {
+                // The request was made but no response was received
+                console.error('No response received:', error.request);
+            } else {
+                // Something happened in setting up the request that triggered an Error
+                console.error('Error setting up request:', error.message);
+            }
+        } finally {
+            console.log('Approval process completed for leave request ID:', id);
+        }
+    };
     const [conges, setConges] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -47,6 +87,7 @@ const Attente = () => {
 
     return (
         <div>
+            <NavbarG/>
             <div className='Historique'> <h2>Historique des Congés</h2></div>
             <div className='aaa'>
                 <p><a href="/attente" className="en attente">conges en attente</a>
@@ -88,7 +129,7 @@ const Attente = () => {
                                 <td>  {new Date(conge.endDate).toLocaleDateString()}</td>
                                 <td>
                                     <button className="btn btn-primary" onClick={() => handleEdit(conge._id)}>rejeter
-                                    </button><button className="btn btn-primary">approuver
+                                    </button><button className="btn btn-primary" onClick={() => handleAccept(conge._id)}>approuver
                                     </button>
                                     
                                 </td>

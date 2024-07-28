@@ -3,7 +3,7 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import axios from 'axios';
 import "react-big-calendar/lib/css/react-big-calendar.css";
-
+import NavbarG from './components/navbar/navbar';
 const localizer = momentLocalizer(moment);
 
 const CongeCalendar = () => {
@@ -36,6 +36,7 @@ const CongeCalendar = () => {
 
     return (
         <div className="App" style={{ padding: "14px" }}>
+            <NavbarG />
             <Calendar
                 localizer={localizer}
                 events={events}

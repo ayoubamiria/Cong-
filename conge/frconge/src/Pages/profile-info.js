@@ -2,6 +2,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./styleprof.css";
+import NavbarG from './components/navbar/navbar';
 
 export const Profile = () => {
     const userData = localStorage.getItem("user_data");
@@ -44,13 +45,8 @@ export const Profile = () => {
     }, [userId]);
     return (
         <div className="profile">
-          
-            <div className="overlap">
-                <div className="group-2">
-                    <div className="PROFI-le"><a href='/profil'>PROFILE</a></div>
-                    <div className="text-wrapper-4"><a href='/home'>ACCEUIL</a></div>
-                </div>
-            </div>
+          <div className='navbarprof'> <NavbarG /></div>
+           
             <div className="overlap-group">
                 <form onSubmit={submitModif}>
                     <div className="overlap-wrapper">

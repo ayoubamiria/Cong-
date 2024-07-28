@@ -149,7 +149,7 @@ export class DemandeCongeService {
 
         return leaveRequest;
     }
-    //
+    // update to reject
     async declineLeaveRequest(id: string): Promise<DemandeCongeDocument> {
         // Find the leave request
         const leaveRequest = await this.demandeCongeModel.findById(id);

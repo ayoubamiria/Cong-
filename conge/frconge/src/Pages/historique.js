@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './page-css/historique.css'
 import { differenceInDays } from 'date-fns';
+import NavbarG from './components/navbar/navbar';
 
 
 const HistoriqueConge = () => {
@@ -42,6 +43,7 @@ const HistoriqueConge = () => {
 
     return (
         <div>
+            <NavbarG/>
            <div className='Historique'> <h2>Historique des Congés</h2></div>
             {conges.length === 0 ? (
                 <p>Aucun congé trouvé.</p>

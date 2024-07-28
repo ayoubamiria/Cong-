@@ -1,35 +1,41 @@
 import React from 'react';
 import './navbar.css';
+import { useNavigate } from "react-router-dom";
 
-function NavbarG() {
+const NavbarG = () => {
+    const navigate = useNavigate();
     return (
         <div className="App">
-            <Navbar />
+            <Navbar navigate={navigate} />
         </div>
     );
 }
 
-const Navbar = () => {
-   
+const Navbar = ({ navigate }) => {
     return (
         <div>
-        <nav className="navbar">
-            <div className="navbar-container">
-                <img src="path-to-logo" alt="Logo" className="./images/navbar.png" />
-                <ul className="nav-links">
-                    <li><a href="/home">Accueil</a></li>
-                   
-                    <li><a href="#profile">Profil</a></li>
-                </ul>
-                <button className="logout-button">Se Déconnecter</button>
+            <div className="navbar">
+                <header className="header">
+                    <div className="header-left">
+                        <span className="nav-item">
+                            <a style={{ fontFamily: 'Aclonica, sans-serif' }} href='/home'>ACCEUIL</a>
+                        </span>
+                        <span className="nav-item2">
+                            <a style={{ fontFamily: 'Aclonica, sans-serif' }} href="/profil">PROFIL</a>
+                        </span>
+                    </div>
+                    <div className="header-right">
+                        <button className="logout-button" onClick={() => navigate("/")}>SE DECONNECTER</button>
+                    </div>
+                </header>
             </div>
-        
-            </nav>
-        
         </div>
     );
 }
 
-
-
 export default NavbarG;
+
+
+
+
+

@@ -1,65 +1,71 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+.header {
 
-.App {
-    text-align: center;
+    background-image: url('../../../images/navbar.png');
+    background-size: cover;
+    /* This ensures the image covers the entire header */
+    background-position: center;
+    /* This centers the image */
+    background-repeat: no-repeat;
+    /* This prevents the image from repeating */
+    padding: 50px;
 }
-
-.navbar {
-    background-color: #bde4e8;
-    padding: 10px 20px;
+@font-face {
+    font-family: 'Aclonica';
+    src: url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap') format('woff2'),
+        url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+
+
 }
 
-.navbar-container {
+.header-left,
+.header-right {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    width: 50px;
-    margin-right: 20px;
+.nav-item {
+    margin-right: 0cm;
+    margin-left: 12cm;
+    font-size: 25px;
+    color: #333;
+    color: #D78780;
+    font-family: 'Aclonica', sans-serif;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.nav-item2 {
+    margin-right: 0cm;
+    margin-left: 5cm;
+    font-size: 25px;
+    color: #4936A9;
+    font-family: 'Aclonica', sans-serif;
 }
 
-.nav-links li {
-    margin: 0 15px;
-}
+.nav-item2 :hover {
+    color: #D78780;
+    font-family: 'Aclonica', sans-serif;
 
-.nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
 }
 
 .logout-button {
-    background-color: #ff7b7b;
-    border: none;
-    color: white;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
     cursor: pointer;
+    border-radius: 50px;
 }
 
-.content {
-    margin-top: 20px;
-}
+.logout-button:hover {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
 
-h1 {
-    color: #8bc34a;
-    font-size: 2rem;
+
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import 'C:/Users/User/Desktop/Conges/Congy/conge/frconge/src/Pages/page-css/historique.css'
 import { differenceInDays } from 'date-fns';
+import NavbarG from '../components/navbar/navbar';
 
 
 const Verif = () => {
@@ -34,7 +35,8 @@ const Verif = () => {
     }
 
     return (
-        <div>
+        <div>            <NavbarG />
+
             <div className='Historique'> <h2>Historique des Congés</h2></div>
             <div className='aaa'>
                 <p><a href="/attente" className="en attente">conges en attente</a>
