@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     /* This prevents the image from repeating */
     padding: 50px;
+    width: max-width;
 }
 @font-face {
     font-family: 'Aclonica';

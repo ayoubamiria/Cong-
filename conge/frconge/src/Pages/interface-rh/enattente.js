@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import 'C:/Users/User/Desktop/Conges/Congy/conge/frconge/src/Pages/page-css/historique.css'
 import { differenceInDays } from 'date-fns';
-import NavbarG from '../components/navbar/navbar';
+import NavbarH from '../components/navbar/navbarh';
 
 
 const Attente = () => {
@@ -87,17 +87,15 @@ const Attente = () => {
 
     return (
         <div>
-            <NavbarG/>
+            <NavbarH/>
             <div className='Historique'> <h2>Historique des Congés</h2></div>
             <div className='aaa'>
-                <p><a href="/attente" className="en attente">conges en attente</a>
+                <p><a href="/attente" className="hrefen-attente">Congé(s) en attente(s)</a>
                 </p>
-                <a href="/verif" className="en attente">tout les conges </a>
-
-
+                <a href="/verif" className="hrefen-attente23">Tous les congés </a>
             </div>
             {conges.length === 0 ? (
-                <p>Aucun congé trouvé.</p>
+              <div className='aucun'>  <p>Aucun congé trouvé.</p></div>
             ) : (
                 <table>
                     <thead>

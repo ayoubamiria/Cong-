@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./styleprof.css";
 import NavbarG from './components/navbar/navbar';
+import image1 from '../images/unknown.jpeg';
+
 
 export const Profile = () => {
     const userData = localStorage.getItem("user_data");
@@ -152,7 +154,7 @@ export const Profile = () => {
                 </div>
             </div>
             <div className="text-wrapper-20">{firstName} { lastName }</div>
-            <img className="jpg" alt="Jpg" src="about01-jpg.png" />
+            <img className="jpg" alt="Jpg" src={image1} />
 
         </div>
 

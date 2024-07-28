@@ -345,3 +345,43 @@ body {
         background-repeat: no-repeat;
         border-radius: 10px;
 }
+.login-image1{
+        flex: 1;
+            /* Take up half the width */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            /* Ensure no padding */
+            box-sizing: border-box;
+            height: 100%;
+            /* Full height of the container */
+
+
+}
+.ay{
+    flex: 1;
+        /* Take up half the width */
+        padding: 20px;
+        box-sizing: border-box;
+
+}
+.form{
+
+        flex: 1;
+            /* Take up half the width */
+            padding: 20px;
+            box-sizing: border-box;
+}
+.register-content{
+
+    display: flex;
+        width: 100%;
+        height: 100vh;
+}
+.imgreg{
+
+        width: 100%;
+            height: 100%;
+            object-fit: cover;
+}

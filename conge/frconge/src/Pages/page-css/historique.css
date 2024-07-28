@@ -116,3 +116,35 @@ th {
         
        
 }
+.aaa {
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns items to the right */
+    gap: 20px;
+    /* Adds space between the items */
+    margin-top: 20px;
+}
+
+.hrefen-attente,
+.hrefen-attente2,.hrefen-attente23 {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.hrefen-attente23 {
+    line-height: 1.6cm;
+}
+
+.hrefen-attente23:hover,
+.hrefen-attente:hover,
+.hrefen-attente2:hover {
+    color: #4936A9;
+    /* Change color on hover */
+}
+.aucun{display: flex;
+    justify-content: center;
+    font-size: larger;
+    
+    
+}

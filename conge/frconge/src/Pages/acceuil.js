@@ -1,6 +1,13 @@
 import React from "react";
 import "./style.css";
-   import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import image from '../images/acceuil/2.png';
+import image3 from '../images/acceuil/3.png';
+import image4 from '../images/acceuil/4.png';
+import image1 from '../images/acceuil/1.jpg';
+
+
+
 
 const Acceuil =  () => {
  
@@ -10,29 +17,24 @@ const Acceuil =  () => {
       
         <div className="page-d-acceuil">
             
-                <div className="overlap">
+                <div className="overlap"><div className="section111">
                 <div className="text-wrapper"><a className="inscrire" href="/signup">S’INSCRIRE</a>
                   
                     <button className='btn signup' onClick={() => navigate("/signin")}>Se Connecter</button></div>
 
 
-                <div className="PROFI-le"><a href="/signin">PROFILE</a></div>
-                    <div className="overlap-group">
-                    <div className="div"><a href="/">ACCEUIL</a></div>
-                        <img className="line" alt="Line" src="line-2.svg" />
-                </div>
-                
+              
                     <div className="overlap-2">
-                    <img className="unsplash" alt="Unsplash" src="./images/acceuil/1.png" />
+                    <img className="unsplash" alt="Unsplash" src={image1} />
                     <p className="trouver-l-quilibre">TROUVER L’ÉQUILIBRE PARFAIT </p>
                     <p className="trouver-l-quilibre2"> POUR VOTRE FUTURE CONGES</p>
 
                     </div>
-                    <img className="img" alt="Line" src="line-1.svg" />
-                </div>
+                    
+                </div></div>
                 <div className="section">
                     <div className="div-2">
-                    <img className="integrations-all" alt="Integrations all" src='1.jpg'/>
+                    <img className="integrations-all" alt="Integrations all" src={image}  />
                         <div className="div-3">
                             <p className="connect-your-tools">
                                 Connect <br /> your tools, <br /> close your tabs
@@ -65,7 +67,7 @@ const Acceuil =  () => {
                         </div>
                     </div>
                     <div className="rectangle-3" />
-                <img className="unsplash-ns" alt="Unsplash ns" src="./images/acceuil/4.png" />
+                <img className="unsplash-ns" alt="Unsplash ns" src={image4} />
                 </div>
                 <div className="overlap-4">
                     <div className="div-4">
@@ -93,7 +95,7 @@ const Acceuil =  () => {
                             </div>
                         </div>
                     </div>
-                <img className="unsplash-vpwafrqtbzm" alt="Unsplash vpwafrqtbzm" src="./images/acceuil/3.png" />
+                <img className="unsplash-vpwafrqtbzm" alt="Unsplash vpwafrqtbzm" src={image3} />
                 </div>
             </div>
         );

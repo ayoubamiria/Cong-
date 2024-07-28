@@ -18,12 +18,14 @@ const HomeRh = () => {
 
     return (
         <div className="home-page">
-            <header className="header">
-                <div className="header-left">
-                    <span className="nav-item">ACCEUIL</span>
+            <header className="header1">
+                <div className="header-left1">
+
+                    <span className="nav-item4"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href='/homerh'>ACCEUIL</a></span>
+                    <span className="nav-item21"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href="/profil">PROFIL</a></span>
                 </div>
-                <div className="header-right">
-                    <span className="nav-item">PROFIL</span>
+                <div className="header-right1">
+
                     <button className="logout-button" onClick={() => navigate("/")}>SE DECONNECTER</button>
                 </div>
             </header>

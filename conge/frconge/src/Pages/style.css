@@ -593,10 +593,16 @@ color: #d78780;
     width: 899px;
 }
 .inscrire{
-    color: aqua;
+    color: rgb(255, 255, 255);
 
 }
 .conn{
     color: #d78780;
 font-size: 15px;
+}
+.overlap{
+    background-image: url("../images/section.png");
+}
+.unsplash{
+    border-radius: 10px;
 }

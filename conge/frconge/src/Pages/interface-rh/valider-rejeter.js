@@ -3,6 +3,7 @@ import axios from 'axios';
 import 'C:/Users/User/Desktop/Conges/Congy/conge/frconge/src/Pages/page-css/historique.css'
 import { differenceInDays } from 'date-fns';
 import NavbarG from '../components/navbar/navbar';
+import NavbarH from '../components/navbar/navbarh';
 
 
 const Verif = () => {
@@ -35,13 +36,13 @@ const Verif = () => {
     }
 
     return (
-        <div>            <NavbarG />
+        <div>            <NavbarH />
 
             <div className='Historique'> <h2>Historique des Congés</h2></div>
             <div className='aaa'>
-                <p><a href="/attente" className="en attente">conges en attente</a>
-                </p>
-                <a href="/verif" className="en attente">tout les conges </a>
+                <a href="/attente" className="hrefen-attente"><b>Congé(s) en attente(s)</b></a>
+                
+                <a href="/verif" className="hrefen-attente2"><b>Tous les congés</b> </a>
 
 
             </div>

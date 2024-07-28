@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UserService from '../Services/UserService';
+import image2 from '../images/imglogin.jpeg'
 
 const Register = () => {
     const [firstName, setFirstName] = useState('');
@@ -53,13 +54,13 @@ const Register = () => {
 
     return (
         <div className='register-content'>
-            <div>
+            
+            <div className='form'>
+
+<div className='ay'>
                 <h1>FORMULAIRE D'INSCRIPTION</h1>
                <div className='ppp'><p>Creer votre Compte par ici</p></div> 
             </div>
-            <div className='form'>
-
-
 
                 <form onSubmit={Signup}>
                     <div className='form-group'>
@@ -145,9 +146,10 @@ const Register = () => {
                         />
                     </div> }
                     <input className='btreset' type='reset' value='Reset' />
-                    <button className='btn signup' type='submit'>Sign Up</button>
+                    <button className='btn signup' type='submit' on >Sign Up</button>
                 
                 </form>
+            </div><div className="login-image1"><img className="imgreg"src={image2}></img>
             </div>
         </div>
     );

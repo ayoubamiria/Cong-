@@ -1,7 +1,7 @@
 import React, { useState ,useEffect } from "react";
 import "./page-css/creeconge.css"
 import axios from "axios";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from 'react-router-dom'; // For navigation after login
 
 const CreerConge = () => {
@@ -76,7 +76,7 @@ const CreerConge = () => {
 
     return ( <div><div className="navbar"><header className="header" >
                 <div className="header-left">
-
+<Toaster/>
                     <span className="nav-item"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href='/home'>ACCEUIL</a></span>
                     <span className="nav-item2"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href="/profil">PROFIL</a></span>
                     
