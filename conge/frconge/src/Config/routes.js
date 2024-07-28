@@ -14,6 +14,7 @@ import Verif from '../Pages/interface-rh/valider-rejeter';
 import Attente from '../Pages/interface-rh/enattente';
 import Securite from '../Pages/securite';
 import Solde from '../Pages/solde';
+import Test from '../Pages/test';
 
 
 const router = createBrowserRouter([
@@ -74,6 +75,11 @@ const router = createBrowserRouter([
         path: '/solde',
         element: <Solde/>,
     },
+    {
+        path: '/test',
+        element: <Test />,
+    },
+
 
     
 ]);

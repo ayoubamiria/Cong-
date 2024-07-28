@@ -132,9 +132,9 @@ export const Profile = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="rectangle" />
-                    <div className="rectangle-2" />
-                    <div className="rectangle-3" />
+                    <div className="rectangle-111" />
+                    <div className="rectangle-23" />
+                    <div className="rectangle-31" />
                     <div className="text-wrapper-17"><a href='/securite'>Securite</a></div>
                     <div className="text-wrapper-18"><a href='/solde'>Solde</a></div>
                     <div className="text-wrapper-19"><a href='/profil'>Informations</a></div>

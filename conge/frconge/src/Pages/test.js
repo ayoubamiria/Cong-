@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
-import "../Pages/page-css/solde.css";
+import "./test.css";
 import NavbarG from './components/navbar/navbar';
 
- const Solde = () => {
+export const Test = () => {
     const userData = localStorage.getItem("user_data");
     const userDataParsed = JSON.parse(userData);
     const userId = userDataParsed._id; // Assurez-vous que vous récupérez l'ID utilisateur correctement
@@ -38,9 +38,9 @@ import NavbarG from './components/navbar/navbar';
                             <div className="firstname">
                                 <div className="overlap-group-21">
                                     <div className="div-wrapper1">
-                                        <div className="text-wrapper-55">
-                                            <input className='input123' type="text" value={days} />Jour(s)
-                                        </div>                                           
+                                        <div className="text-wrapper-5">
+                                            <input className='input12' type="text" value={days} />Jour(s)
+                                        </div>
                                     </div>
                                     <div className="text-wrapper-6"><b>Choisir le type de Congé</b></div>
                                 </div>
@@ -58,7 +58,7 @@ import NavbarG from './components/navbar/navbar';
                                     </div>
                                 </div>
                             </div>
-
+                           
                         </div>
                     </div>
                     <div className="rectangle" />
@@ -82,4 +82,4 @@ import NavbarG from './components/navbar/navbar';
         </div>
     );
 };
-export default Solde 
+export default Test;

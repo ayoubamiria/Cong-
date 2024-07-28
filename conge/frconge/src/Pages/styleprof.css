@@ -500,8 +500,8 @@
     width: 126px;
 }
 
-.profile .rectangle {
-    background-color: #b6d87745;
+.rectangle-111{
+    background-color: #d9d9d9;
     border-radius: 100px 100px 0px 0px;
     height: 72px;
     left: 0;
@@ -510,7 +510,7 @@
     width: 303px;
 }
 
-.profile .rectangle-2 {
+ .rectangle-23{
     background-color: #d9d9d9;
     border-radius: 100px 100px 0px 0px;
     height: 72px;
@@ -520,8 +520,8 @@
     width: 303px;
 }
 
-.profile .rectangle-3 {
-    background-color: #d9d9d9;
+ .rectangle-31 {
+    background-color: #b6d87745;
     border-radius: 100px 100px 0px 0px;
     height: 72px;
     left: 606px;
@@ -561,7 +561,7 @@
 }
 
 .profile .text-wrapper-19 {
-    color: #4936a9;
+    color: #000000;
     font-family: "Inter-Medium", Helvetica;
     font-size: 20px;
     font-weight: 500;
