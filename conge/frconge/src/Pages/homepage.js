@@ -44,13 +44,13 @@ const Home = () => {
     return (
         
         <div className="home-page">
-            <header className="header">
-                <div className="header-left">
+            <header className="header1">
+                <div className="header-left1">
 
-                    <span className="nav-item"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href='/home'>ACCEUIL</a></span>
-                    <span className="nav-item2"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href="/profil">PROFIL</a></span>
+                    <span className="nav-item4"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href='/home'>ACCEUIL</a></span>
+                    <span className="nav-item21"><a style={{ fontFamily: 'Aclonica, sans-serif' }} href="/profil">PROFIL</a></span>
                 </div>
-                <div className="header-right">
+                <div className="header-right1">
                     
                     <button className="logout-button" onClick={() => navigate("/")}>SE DECONNECTER</button>
                 </div>
@@ -62,7 +62,7 @@ const Home = () => {
                 <div className="menu-section">
                     <button className="menu-item" onClick={() => navigate("/creeconge")}><b>Creer Congé</b></button>
                     <button className="menu-item" onClick={() => navigate("/historique")}><b>Mes Congés</b></button>
-                    <button className="menu-item" onClick={() => navigate("/calendar")}><b>Ma Calendrier</b></button>
+                    <button className="menu-item2" onClick={() => navigate("/calendar")}><b>Ma Calendrier</b></button>
                 </div>
             </div>
    

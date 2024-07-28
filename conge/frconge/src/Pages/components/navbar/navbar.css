@@ -3,7 +3,7 @@
     background-image: url('../../../images/navbar.png');
     background-size: cover;
     /* This ensures the image covers the entire header */
-    background-position: center;
+    background-position:  center;
     /* This centers the image */
     background-repeat: no-repeat;
     /* This prevents the image from repeating */
@@ -35,7 +35,7 @@ header {
     margin-left: 12cm;
     font-size: 25px;
     color: #333;
-    color: #D78780;
+    color: #efefef;
     font-family: 'Aclonica', sans-serif;
 }
 
@@ -43,7 +43,7 @@ header {
     margin-right: 0cm;
     margin-left: 5cm;
     font-size: 25px;
-    color: #4936A9;
+    color: #ececec;
     font-family: 'Aclonica', sans-serif;
 }
 
@@ -51,11 +51,15 @@ header {
     color: #D78780;
     font-family: 'Aclonica', sans-serif;
 
+}.nav-item:hover {
+    color: #D78780;
+    font-family: 'Aclonica', sans-serif;
+
 }
 
 .logout-button {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #D78780;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -64,8 +68,8 @@ header {
 
 .logout-button:hover {
     background-color: #ffffff;
-    border: 2px solid #000000;
-    color: #000000;
+    border: 2px solid #D78780;
+    color: #D78780;
 
 
 }

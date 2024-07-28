@@ -24,12 +24,13 @@ body {
     display: flex;
 }
 
-.register-cover {
+/* .register-cover {
     background-image: url("../src/images/home.jpg");
     background-size: cover;
     width: 50%;
     height: 100%;
-}
+ 
+} */
 
 .register-content {
     width: 50%;
@@ -193,21 +194,31 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.header {
+.header1 {
+    background-image: url("../src/images/home1.2.png");
+    background-position: -7px ;
+    /* Adjust horizontal offset as needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Ensure the image covers the entire element */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    width: 100%;
+    box-shadow: none;
+        /* Remove shadow if any */
   
     
 }
 
-.header-left,
-.header-right {
+.header-left1,
+.header-right1 {
     display: flex;
     align-items: center;
 }
 
-.nav-item {
+.nav-item4 {
     margin-right: 0cm;
     margin-left: 12cm;
     font-size: 25px;
@@ -215,7 +226,7 @@ body {
     color: #D78780;
     font-family: 'Aclonica', sans-serif;
 }
-.nav-item2 {
+.nav-item21 {
     margin-right: 0cm;
     margin-left: 5cm;
     font-size: 25px;
@@ -223,7 +234,7 @@ body {
     font-family: 'Aclonica', sans-serif;
 }
 
-.nav-item2 :hover {
+.nav-item21 :hover {
     color: #D78780;
     font-family: 'Aclonica', sans-serif;
    
@@ -284,6 +295,25 @@ body {
     cursor: pointer;
       
 }
+.menu-item2 {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #e1ffae;
+    border: none;
+    font-size: 40px;
+    font-family: Plus Jakarta Sans;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50px;
+
+}
+
+.menu-item2:hover {
+    background-color: #ffffff;
+    border: 2px solid #e1ffae;
+    cursor: pointer;
+
+}
 
 @font-face {
     font-family: 'Aclonica';
@@ -298,11 +328,13 @@ body {
     background-image: url('../src/images/home.jpg');
         background-size: cover;
         /* This ensures the image covers the entire header */
-        background-position: center;
+        background-position:-9px center;
+        
         /* This centers the image */
         background-repeat: no-repeat;
         /* This prevents the image from repeating */
-        padding: 50px;
+        padding: 106px;
+        
 }
 .login-image{
     background-image: url('../src/images/imglogin.jpeg');
