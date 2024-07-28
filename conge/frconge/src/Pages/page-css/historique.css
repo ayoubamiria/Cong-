@@ -8,6 +8,9 @@
 }
 .Historique {
     color :#4936A9
+    ;
+    right: 1000cm;
+
 }
 .table-container  {
      text-align: center;
@@ -28,7 +31,8 @@ td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #b6d87776;
+    color: #D78780;
 }
 
 .status {
@@ -101,4 +105,14 @@ th {
 .status.rejeté {
     background-color: #dc3545;
      color: rgb(255, 255, 255);
+}
+.tableau{
+    width: 80%;
+        margin: 5px auto;
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+        border-color: blueviolet;
+        
+       
 }

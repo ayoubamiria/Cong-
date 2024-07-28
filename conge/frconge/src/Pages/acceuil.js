@@ -32,7 +32,7 @@ const Acceuil =  () => {
                 </div>
                 <div className="section">
                     <div className="div-2">
-                    <img className="integrations-all" alt="Integrations all" src="./images/acceuil/2.png" />
+                    <img className="integrations-all" alt="Integrations all" src='1.jpg'/>
                         <div className="div-3">
                             <p className="connect-your-tools">
                                 Connect <br /> your tools, <br /> close your tabs

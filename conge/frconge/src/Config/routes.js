@@ -13,6 +13,7 @@ import HomeRh from '../Pages/interface-rh/homerh';
 import Verif from '../Pages/interface-rh/valider-rejeter';
 import Attente from '../Pages/interface-rh/enattente';
 import Securite from '../Pages/securite';
+import Solde from '../Pages/solde';
 
 
 const router = createBrowserRouter([
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
     {
         path: '/securite',
         element: <Securite />,
+    },
+    {
+        path: '/solde',
+        element: <Solde/>,
     },
 
     

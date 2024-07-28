@@ -46,13 +46,13 @@ const HistoriqueConge = () => {
             {conges.length === 0 ? (
                 <p>Aucun congé trouvé.</p>
             ) : (
-                    <table>
+                    <div className='tableau'><table>
                         <thead>
                             <tr>
                                 <th>Type</th>
                                 <th>Status</th>
                                 <th>Raison</th>
-                                <th>Nombre des jour(s)</th>
+                                <th>Nombre de jour(s)</th>
                                 <th>Date debut</th>
                                 <th>Date fin</th>
                             </tr>
@@ -78,7 +78,7 @@ const HistoriqueConge = () => {
                                 </tr>
                             ))}
                         </tbody>
-                    </table>
+                    </table></div>
             )}
         </div>
     );

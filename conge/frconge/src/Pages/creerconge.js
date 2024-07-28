@@ -94,31 +94,31 @@ const CreerConge = () => {
             <form onSubmit={handleSubmit}>
                 <div className="form-group1">
                     <label htmlFor="nom">Nom & Prenom : *</label>
-                    <input className="input1"type="text" id="nom" placeholder="Entrer votre nom et prenom..." value={nom} onChange={(e) => setNom(e.target.value)} />
+                    <input className="input12"type="text" id="nom" placeholder="Entrer votre nom et prenom..." value={nom} onChange={(e) => setNom(e.target.value)} />
                     {errors.nom && <span className="error">{errors.nom}</span>}
                 </div>
 
                 <div className="form-group1">
                     <label htmlFor="email">Email: *</label>
-                    <input className="input1" type="email" id="email" placeholder="Entrer Email disponible..." value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input className="input12" type="email" id="email" placeholder="Entrer Email disponible..." value={email} onChange={(e) => setEmail(e.target.value)} />
                     {errors.email && <span className="error">{errors.email}</span>}
                 </div>
 
                 <div className="form-group1">
                     <label htmlFor="startdate">Date debut: *</label>
-                    <input className="input1" type="date" id="startdate" value={dateDebut} onChange={(e) => setDateDebut(e.target.value)} />
+                    <input className="input12" type="date" id="startdate" value={dateDebut} onChange={(e) => setDateDebut(e.target.value)} />
                     {errors.dateDebut && <span className="error">{errors.dateDebut}</span>}
                 </div>
 
                 <div className="form-group1">
                     <label htmlFor="enddate">Date fin: *</label>
-                    <input className="input1" type="date" id="enddate" value={dateFin} onChange={(e) => setDateFin(e.target.value)} />
+                    <input className="input12" type="date" id="enddate" value={dateFin} onChange={(e) => setDateFin(e.target.value)} />
                     {errors.dateFin && <span className="error">{errors.dateFin}</span>}
                 </div>
 
                 <div className="form-group1">
                     <label htmlFor="typeConge">Selectionner Le Type de congé: *</label>
-                    <select className="input1"  id="typeConge" value={typeConge} onChange={(e) => setTypeConge(e.target.value)}>
+                    <select className="input12"  id="typeConge" value={typeConge} onChange={(e) => setTypeConge(e.target.value)}>
                         <option value="maladie">Maladie</option>
                         <option value="vacance">Vacances</option>
                         <option value="personnel">Personnel</option>
@@ -129,7 +129,7 @@ const CreerConge = () => {
 
                 <div className="form-group1">
                     <label htmlFor="raison">Raison:</label>
-                    <textarea className="input1"  id="raison" placeholder="Expliquer brievement le besoin de congé..." value={raison} onChange={(e) => setRaison(e.target.value)} />
+                    <textarea className="input12"  id="raison" placeholder="Expliquer brievement le besoin de congé..." value={raison} onChange={(e) => setRaison(e.target.value)} />
                 </div>
 
                 <div className="form-group1">

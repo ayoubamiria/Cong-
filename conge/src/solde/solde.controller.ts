@@ -18,11 +18,10 @@ export class SoldeController {
 
     /////////
     @Get(':userId/:leaveType')
-  async getDaysByType(@Param('userId') userId: string, @Param('leaveType') leaveType: string) {
-    const days = await this.soldeService.getDaysByType(userId, leaveType);
-        return { days };
-        
-  }
+    async getDaysByType(@Param('userId') userId: string, @Param('leaveType') leaveType: string): Promise<number> {
+        console.log(`Received request for userId: ${userId} and leaveType: ${leaveType}`);
+        return this.soldeService.getDaysByType(userId, leaveType);
+    }   
     @Get(':userId')
     async getSoldeByUserId(@Param('userId') userId: string) {
         const solde = await this.soldeService.findOneByUser(userId);

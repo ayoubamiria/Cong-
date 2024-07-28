@@ -31,16 +31,22 @@ export class User {
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
-UserSchema.set('collection', 'user'); // Spécifiez la collection personnalisée
-// chaque fois qu'un user est cree il aura un solde 
-UserSchema.post('save', async function (user: UserDocument) {
-    const soldeService = new SoldeService(user.model('Solde')); // Créez une instance de SoldeService
+UserSchema.set('collection', 'user'); // Specify the custom collection
 
-    await soldeService.create({
-        user: user.id,
-        totalVacationDays: 30,
-        totalSickDays: 7,
-        totalPersonalDays: 14,
-        totalOtherDays: 10,
-    });
-    });
+// Post-save hook to create solde for a new user
+UserSchema.post('save', async function (user: UserDocument) {
+    const soldeService = new SoldeService(user.model('Solde')); // Create an instance of SoldeService
+
+    try {
+        await soldeService.create({
+            user: user.id,
+            totalVacationDays: 30,
+            totalSickDays: 7,
+            totalPersonalDays: 14,
+            totalOtherDays: 10,
+        });
+        console.log(`Solde created for user: ${user._id}`);
+    } catch (error) {
+        console.error(`Error creating solde for user: ${user._id}`, error);
+    }
+});
