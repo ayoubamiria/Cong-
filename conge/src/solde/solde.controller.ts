@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Put, Delete, HttpStatus, Res } from '@nestjs/common';
 import { SoldeService } from './solde.service';
 
 @Controller('solde')
@@ -17,11 +17,21 @@ export class SoldeController {
     }
 
     /////////
+
     @Get(':userId/:leaveType')
-    async getDaysByType(@Param('userId') userId: string, @Param('leaveType') leaveType: string): Promise<number> {
-        console.log(`Received request for userId: ${userId} and leaveType: ${leaveType}`);
-        return this.soldeService.getDaysByType(userId, leaveType);
-    }   
+    async getRemainingDays(
+        @Param('userId') userId: string,
+        @Param('leaveType') leaveType: string,
+        @Res() res,
+    ) {
+        try {
+            const result = await this.soldeService.getDaysByType(userId, leaveType);
+            res.status(HttpStatus.OK).json(result);
+        } catch (error) {
+            console.error(error);
+            res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({ message: error.message });
+        }
+    }       
     @Get(':userId')
     async getSoldeByUserId(@Param('userId') userId: string) {
         const solde = await this.soldeService.findOneByUser(userId);

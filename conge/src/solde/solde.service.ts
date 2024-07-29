@@ -33,7 +33,7 @@ export class SoldeService {
     }
 
     ///////////
-    async getDaysByType(userId: string, leaveType: string): Promise<number> {
+    async getDaysByType(userId: string, leaveType: string): Promise<{ remainingDays: number }> {
         console.log(`Fetching solde for user: ${userId} with leave type: ${leaveType}`);
 
         const solde = await this.soldeModel.findOne({ user: userId }).exec();
@@ -41,25 +41,30 @@ export class SoldeService {
         if (!solde) {
             console.error(`User with ID ${userId} not found`);
             throw new NotFoundException('User not found');
-           
         }
-      
-        
+
         const normalizedLeaveType = leaveType.toLowerCase(); // Normalize the leave type to avoid case sensitivity issues
 
+        let remainingDays: number;
         switch (normalizedLeaveType) {
             case 'vacance':
-                return solde.totalVacationDays;
+                remainingDays = solde.totalVacationDays;
+                break;
             case 'maladie':
-                return solde.totalSickDays;
+                remainingDays = solde.totalSickDays;
+                break;
             case 'personnel':
-                return solde.totalPersonalDays;
+                remainingDays = solde.totalPersonalDays;
+                break;
             case 'other':
-                return solde.totalOtherDays;
+                remainingDays = solde.totalOtherDays;
+                break;
             default:
                 console.error(`Invalid leave type: ${leaveType}`);
                 throw new NotFoundException(`Invalid leave type: ${leaveType}`);
         }
+
+        return { remainingDays };
     }
     async update(id: string, updateSoldeDto: any): Promise<Solde> {
         return this.soldeModel.findByIdAndUpdate(id, updateSoldeDto, { new: true }).exec();

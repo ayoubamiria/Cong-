@@ -37,11 +37,11 @@ const Acceuil =  () => {
                     <img className="integrations-all" alt="Integrations all" src={image}  />
                         <div className="div-3">
                             <p className="connect-your-tools">
-                                Connect <br /> your tools, <br /> close your tabs
+                            Que vous souhaitiez <br />  creer vos congés, <br /> ou les consulter 
                             </p>
                             <p className="p">
-                                Whether you want to edit your Google Docs, resolve Jira issues, or collaborate over Zoom, Miro has 100+
-                                integrations with tools you already use and love.
+                            On vous guide pour la gestion de vos congés
+                            benificier d'une consultation de votre solde
                             </p>
                             <div className="span">
                                 <div className="div-wrapper">
@@ -77,15 +77,14 @@ const Acceuil =  () => {
                                     <div className="overlap-6">
                                         <div className="h">
                                             <div className="overlap-group-2">
-                                                <div className="text-wrapper-8">All in a calendar,</div>
-                                                <p className="text-wrapper-9">that’s a joy to use</p>
+                                            <div className="text-wrapper-8">Tout dans </div>
+                                            <p className="text-wrapper-9">le calendrier</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <p className="text-wrapper-10">
-                                    An entire meeting collaboration platform built inside a fast and modern calendar you and your team will
-                                    love.
+                                Une plateforme complète  pour vos congés , un calendrier rapide et moderne pour vous...
                                 </p>
                             </div>
                             <div className="div-6">

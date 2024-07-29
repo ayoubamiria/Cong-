@@ -140,9 +140,9 @@ export const Profile = () => {
                     <div className="rectangle-111" />
                     <div className="rectangle-23" />
                     <div className="rectangle-31" />
-                    <div className="text-wrapper-17"><a href='/securite'>Securite</a></div>
-                    <div className="text-wrapper-18"><a href='/solde'>Solde</a></div>
-                    <div className="text-wrapper-19"><a href='/profil'>Informations</a></div>
+                    <div className="text-wrapper-177"><a href='/securite'>Securite</a></div>
+                    <div className="text-wrapper-188"><a href='/solde'>Solde</a></div>
+                    <div className="text-wrapper-199"><a href='/profil'>Informations</a></div>
                     <div className="button"><input type='reset' className="reset" value="Annuler" />
                         <button  className="submit"type="submit" onClick={()=>{navigate("/profil")}}>Envoyer</button></div>
                     
