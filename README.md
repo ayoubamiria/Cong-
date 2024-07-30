@@ -2,7 +2,7 @@
 ## S5OUNA wena mo5i raw mo5ter
 
 
-This project is a Congés (leave) Management System built with React for the frontend and Node.js with Express and MongoDB for the backend. It allows users to request leaves, view their leave history, and view approved leaves on a calendar.
+This project is a leave Management System built with React for the frontend and Node.js with Nest.js and MongoDB for the backend. It allows users to request leaves, view their leave history, view approved leaves on a calendar and consult their left days.
 
 ## Table of Contents
 - [Installation](#installation)
