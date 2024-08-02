@@ -17,6 +17,9 @@ This project is a leave Management System built with React for the frontend and 
 ### Prerequisites
 - Node.js (v14 or higher)
 - MongoDB
+- React
+- Nest.js
+- postman(option)
 
 ### Backend Setup
 1. Clone the repository:
